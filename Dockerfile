@@ -1,4 +1,4 @@
-#=============== USANDO O RUN ================
+#=============== INSTRUÇÃO DE USO ================
 # docker run -u 0 -p 8080:8080 \
 #-v /var/run/docker.sock:/var/run/docker.sock \
 #-v /SERVICOS/jenkins/home:/var/jenkins_home \
@@ -10,7 +10,6 @@
 FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y git
-# RUN apt-get update && apt-get install -y git curl systemd
 
 # ================== DOCKER ==================
 
