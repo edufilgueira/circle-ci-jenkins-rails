@@ -1,12 +1,3 @@
-#=============== INSTRUÇÃO DE USO ================
-# docker run -u 0 -p 8080:8080 \
-#-v /var/run/docker.sock:/var/run/docker.sock \
-#-v /SERVICOS/jenkins/home:/var/jenkins_home \
-#-v /SERVICOS/jenkins/backup:/var/jenkins_backup \
-#--name dockerizando -d jenkins:1.1.0
-
-
-
 FROM openjdk:8-jdk
 
 RUN apt-get update && apt-get install -y git

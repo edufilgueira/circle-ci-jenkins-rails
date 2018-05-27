@@ -1,17 +1,22 @@
 # Official Jenkins Docker image
+Jenkins Integração Contínua e Serviço de Entrega
 
-The Jenkins Continuous Integration and Delivery server.
 
-This is a fully functional Jenkins server.
+Este é um servidor Jenkins totalmente funcional.
 [http://jenkins.io/](http://jenkins.io/).
 
 <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
 
 
+
 # Usage
 
 ```
-docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+ docker run -u 0 -p 8080:8080 --restart always\
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v /SERVICOS/jenkins/home:/var/jenkins_home \
+-v /SERVICOS/jenkins/backup:/var/jenkins_backup \
+--name dockerizando -d jenkins:1.1.0
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
