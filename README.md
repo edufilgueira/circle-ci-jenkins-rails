@@ -12,11 +12,11 @@ Este é um servidor Jenkins totalmente funcional.
 # Usage
 
 ```
- docker run -u 0 -p 8080:8080 --restart always\
+ docker run -u 0 -p 8080:8080 --restart always \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v /SERVICOS/jenkins/home:/var/jenkins_home \
 -v /SERVICOS/jenkins/backup:/var/jenkins_backup \
---name dockerizando -d jenkins:1.1.0
+--name jenkins-ci -d jenkins-ci:1.0.0
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
