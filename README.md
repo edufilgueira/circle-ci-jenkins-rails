@@ -14,8 +14,8 @@ Este é um servidor Jenkins totalmente funcional.
 ```
  docker run -u 0 -p 8080:8080 --restart always \
 -v /var/run/docker.sock:/var/run/docker.sock \
--v /SERVICOS/jenkins/home:/var/jenkins_home \
--v /SERVICOS/jenkins/backup:/var/jenkins_backup \
+-v ./SERVICOS/jenkins/home:/var/jenkins_home \
+-v ./SERVICOS/jenkins/backup:/var/jenkins_backup \
 --name jenkins-ci -d jenkins-ci:1.0.0
 ```
 
