@@ -1,11 +1,12 @@
-# Official Jenkins Docker image
+<img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
+# Imagem Docker do Jenkins Rails Git e Docker
 Jenkins Integração Contínua e Serviço de Entrega
 
 
 Este é um servidor Jenkins totalmente funcional.
 [http://jenkins.io/](http://jenkins.io/).
 
-<img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
+
 
 
 
