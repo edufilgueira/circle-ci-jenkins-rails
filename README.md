@@ -3,7 +3,7 @@
 
 # Imagem Docker do Jenkins Rails Git e Docker
 
-A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration)
+A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration) que envia os deploys para o servidor de produção automaticamente.
 
 ![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40856881-c8cf85c4-65af-11e8-9307-c95680af4fba.png)
 
