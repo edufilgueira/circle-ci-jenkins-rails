@@ -3,11 +3,15 @@ Jenkins Integração Contínua e Serviço de Entrega
 
 <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
 
-Servidor Jenkins totalmente funcional.
-
 A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration)
 ![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40856881-c8cf85c4-65af-11e8-9307-c95680af4fba.png)
 
+# Gerando Imagem
+O script a baixo cria a imagem do jenkins, mas antes de tudo, verifique se a imagem do serviço do jenkins esta presente no sevidor de imagens Registry. Todas as imagens devem esta presentes no servidor de Registry que é o servidor de imagem do docker, caso não esteja é necessário-lo manter atualizado.
+
+```
+docker build . -t seas-jenkins-build:1.0.0
+```
 
 # Rodando serviço
 
