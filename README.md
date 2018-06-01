@@ -24,6 +24,11 @@ docker build . -t seas-jenkins-build:1.0.0
 --name seas-jenkins-build -d seas-jenkins-build:1.0.0 
 ```
 
+Após rodar o comando verifique se o container esta ativo acessando link [http://192.168.0.236:8080](http://192.168.0.236:8080)
+
+
+
+
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
 
 This will store the workspace in /var/jenkins_home. All Jenkins data lives in there - including plugins and configuration.
