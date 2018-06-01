@@ -5,6 +5,17 @@
 
 A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration) que envia os deploys para o servidor de produção automaticamente.
 
+A cada 20 minutos o container Jenkins faz verificação no git buscando mudança no branch master. Ao encontrar alguma mudança executa os seguintes passos:
+
+1. Download dos fontes no branch **master**
+2. Executa o **bundle install**
+3. Roda os testes **rspec**
+4. Remove a imagem **as_principal7000** antiga
+5. Cria a imagem **seas_principal7000** nova
+6. Tagueia a nova imagem
+7. Envia (push) a nova imagem para o **Server Regitry**
+
+
 ![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40858710-9c36c738-65b5-11e8-99d1-a46e2ee2a474.png)
 
 # Gerando Imagem
