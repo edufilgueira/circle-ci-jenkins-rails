@@ -1,9 +1,14 @@
+# Imagem Docker do Jenkins Rails Git e Docker
 <img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
 
 
-# Imagem Docker do Jenkins Rails Git e Docker
+### Fluxo do deploy
 
 A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration) que envia os deploys para o servidor de produção automaticamente.
+
+![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40858710-9c36c738-65b5-11e8-99d1-a46e2ee2a474.png)
+
+### Fluxo de Deploy
 
 A cada 20 minutos o container Jenkins faz verificação no git buscando mudança no branch master. Ao encontrar alguma mudança executa os seguintes passos:
 
@@ -16,7 +21,6 @@ A cada 20 minutos o container Jenkins faz verificação no git buscando mudança
 7. Envia (push) a nova imagem para o _Server Regitry_
 
 
-![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40858710-9c36c738-65b5-11e8-99d1-a46e2ee2a474.png)
 
 # Gerando Imagem
 O script a baixo cria a imagem do jenkins ja integrado com git e o docker instalado, mas antes de tudo, verifique se a imagem do serviço do jenkins esta presente no sevidor de imagens Registry. Todas as imagens devem esta presentes no servidor de Registry que é o servidor de imagem do docker, caso não esteja é necessário-lo manter atualizado.
