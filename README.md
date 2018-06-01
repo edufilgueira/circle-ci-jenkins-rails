@@ -1,24 +1,22 @@
-<img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
-
 # Imagem Docker do Jenkins Rails Git e Docker
 Jenkins Integração Contínua e Serviço de Entrega
 
+<img src="http://jenkins-ci.org/sites/default/files/jenkins_logo.png"/>
 
-Este é um servidor Jenkins totalmente funcional.
-[http://jenkins.io/](http://jenkins.io/).
+Servidor Jenkins totalmente funcional.
 
 A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration)
 ![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40856881-c8cf85c4-65af-11e8-9307-c95680af4fba.png)
 
 
-# Usage
+# Rodando serviço
 
 ```
  docker run -u 0 -p 8080:8080 --restart always \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v $(pwd)/SERVICOS/jenkins/home:/var/jenkins_home \
 -v $(pwd)/SERVICOS/jenkins/backup:/var/jenkins_backup \
---name jenkins-ci -d jenkins-ci:1.0.0
+--name seas-jenkins-build -d seas-jenkins-build:1.0.0 
 ```
 
 NOTE: read below the _build executors_ part for the role of the `50000` port mapping.
