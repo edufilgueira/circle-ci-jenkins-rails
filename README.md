@@ -5,7 +5,7 @@
 
 A estrutura de deploy é feito através do orquestrador de builds Jenkins, que automatiza todo o processo de construção das imagens doquerizadas. A imagem a baixo mostra como a estrutura foi construída, visando otimizar os deploys CI (Continuous Integration) que envia os deploys para o servidor de produção automaticamente.
 
-![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40856881-c8cf85c4-65af-11e8-9307-c95680af4fba.png)
+![estrutura_deploy](https://user-images.githubusercontent.com/37155369/40858710-9c36c738-65b5-11e8-99d1-a46e2ee2a474.png)
 
 # Gerando Imagem
 O script a baixo cria a imagem do jenkins ja integrado com git e o docker instalado, mas antes de tudo, verifique se a imagem do serviço do jenkins esta presente no sevidor de imagens Registry. Todas as imagens devem esta presentes no servidor de Registry que é o servidor de imagem do docker, caso não esteja é necessário-lo manter atualizado.
