@@ -1,5 +1,5 @@
 FROM buildpack-deps:stretch
-
+MAINTAINER Eduardo Filgueira <edufilgueira (at) gmail (dot) com>
 
 
 # Instalando o Ruby
