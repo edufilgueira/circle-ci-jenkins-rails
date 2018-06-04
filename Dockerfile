@@ -1,4 +1,4 @@
-FROM buildpack-deps:stretch
+FROM 192.168.0.1:5000/buildpack-deps:stretch
 MAINTAINER Eduardo Filgueira <edufilgueira (at) gmail (dot) com>
 
 
